@@ -68,22 +68,22 @@ final_text = ["Огромное вам спасибо,",
 
 text_number = 0
 
-bg = pg.image.load('фон.png').convert()
+bg = pg.image.load('Resourses/images/backgroundImage/фон.png').convert()
 bg = pg.transform.scale(bg, size)
 
-heart = pg.image.load('heart.png').convert_alpha()
+heart = pg.image.load('Resourses/images/inGame/heart.png').convert_alpha()
 heart = pg.transform.scale(heart, (30, 30))
 heart_count = 3
 
-burn = pg.mixer.Sound('burn.wav')
+burn = pg.mixer.Sound('Resourses/sounds/inGame/burn.wav')
 burn.set_volume(0.4)
-laser_sound = pg.mixer.Sound('звук лазера.wav')
-win_sound = pg.mixer.Sound('звук победы.wav')
-pg.mixer.music.load('музыка.wav')
+laser_sound = pg.mixer.Sound('Resourses/sounds/inGame/звук лазера.wav')
+win_sound = pg.mixer.Sound('Resourses/sounds/inGame/звук победы.wav')
+pg.mixer.music.load('Resourses/sounds/backgroundSound/музыка.wav')
 pg.mixer.music.set_volume(0.2)
 pg.mixer.music.play()
 
-font = pg.font.Font('Merriweather-Black.ttf', 20)
+font = pg.font.Font('Resourses/fonts/Merriweather-Black.ttf', 20)
 
 captain = Captain()
 alien = Alien()
@@ -130,7 +130,7 @@ while is_running:
         dialogue_mode(captain, start_text)
 
     if mode == "meteorites":
-        if time.time() - start_time >= 20.0:
+        if time.time() - start_time >= 5.0:
             mode = 'alien_scene'
 
         if random.randint(1, 50) == 1:
@@ -157,7 +157,7 @@ while is_running:
         dialogue_mode(alien, alien_text)
 
     if mode == "moon":
-        if time.time() - start_time >= 20.0:
+        if time.time() - start_time >= 5.0:
             mode = 'final_scene'
             pg.mixer.music.fadeout(3)
             win_sound.play()

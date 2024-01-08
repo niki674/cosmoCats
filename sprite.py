@@ -7,7 +7,7 @@ class Meteorite(pg.sprite.Sprite):
     def __init__(self):
         pg.sprite.Sprite.__init__(self)
 
-        self.image = pg.image.load("meteorite.png")
+        self.image = pg.image.load("Resourses/images/inGame/meteorite.png")
         size = random.randint(70, 150)
 
         self.image = pg.transform.scale(self.image, (size, size))
@@ -27,7 +27,7 @@ class Mouse_starship(pg.sprite.Sprite):
     def __init__(self):
         pg.sprite.Sprite.__init__(self)
 
-        self.image = pg.image.load("mouse_starship.png")
+        self.image = pg.image.load("Resourses/images/inGame/mouse_starship.png")
         size = random.randint(70, 150)
 
         self.image = pg.transform.scale(self.image, (size, size))
@@ -48,7 +48,7 @@ class Laser(pg.sprite.Sprite):
     def __init__(self, pos):
         pg.sprite.Sprite.__init__(self)
 
-        self.image = pg.image.load("laser.png")
+        self.image = pg.image.load("Resourses/images/inGame/laser.png")
 
         self.image = pg.transform.scale(self.image, (30, 30))
 
@@ -64,7 +64,7 @@ class Starship(pg.sprite.Sprite):
     def __init__(self):
         pg.sprite.Sprite.__init__(self)
 
-        self.image = pg.image.load("cat_starship_horizontal.png")
+        self.image = pg.image.load("Resourses/images/inGame/cat_starship_horizontal.png")
         self.image = pg.transform.scale(self.image, (100, 100))
         self.image = pg.transform.flip(self.image, False, True)
 
@@ -88,7 +88,7 @@ class Starship(pg.sprite.Sprite):
                 self.rect.y += 1
 
     def switch_mode(self):
-        self.image = pg.image.load("cat_starship.png")
+        self.image = pg.image.load("Resourses/images/inGame/cat_starship.png")
         self.image = pg.transform.scale(self.image, (100, 100))
 
         self.rect = self.image.get_rect()
@@ -101,7 +101,7 @@ class Captain(pg.sprite.Sprite):
     def __init__(self):
         pg.sprite.Sprite.__init__(self)
 
-        self.image = pg.image.load("captain.png")
+        self.image = pg.image.load("Resourses/images/inGame/captain.png")
         self.image = pg.transform.scale(self.image, (400, 400))
 
         self.rect = self.image.get_rect()
@@ -120,7 +120,7 @@ class Alien(pg.sprite.Sprite):
     def __init__(self):
         pg.sprite.Sprite.__init__(self)
 
-        self.image = pg.image.load("alien_cat.png")
+        self.image = pg.image.load("Resourses/images/inGame/alien_cat.png")
         self.image = pg.transform.scale(self.image, (400, 400))
 
         self.rect = self.image.get_rect()
